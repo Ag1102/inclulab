@@ -90,6 +90,13 @@ html {
   color: #000;
   text-decoration: none;
   border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el ratón */
+.hero-content a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
 }
 
 /* Media Queries para ajustar el contenido en pantallas más pequeñas */
@@ -119,94 +126,134 @@ html {
   .hero-content p {
     font-size: 2.5vw;
   }
-
   .hero-content a {
     font-size: 2vw;
     padding: 0.7em 1.8em;
-  }
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el ratón */
+.hero-content a:hover {
+    transform: scale(1.1); /* Aumenta el tamaño */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
 }
 
 /*---------------------------------- Servicios ------------------------------------*/
-
 .servicios {
   width: 100%;
-  padding: 50px;
-  margin: 50px;
+  padding: 50px 0;
+  text-align: center;
   background-color: #f8f9fa;
-  text-align: center; 
 }
 
 .servicios h1 {
-  font-size: 2em; 
-  font-weight: bold; 
+  font-size: 2em;
+  font-weight: bold;
   color: #333;
 }
 
 .servicios-cards {
-  width: 100%;
-  padding: 50px;
   display: flex;
-  margin: 0px;
-  flex-direction: column;
+  justify-content: center; /* Centra las tarjetas */
+  gap: 10px; /* Espacio entre las tarjetas */
   background-color: #1c2a45;
+  padding: 50px;
 }
 
 .container {
   display: flex;
-  flex: 1;
+  justify-content: space-between;
 }
-
 .card {
-  flex: 1;
+  width: 326px;  /* Ancho fijo de las tarjetas */
+  height: 687px; /* Altura fija de las tarjetas */
   margin: 10px;
-  background-size: cover;
-  background-position: center;
-  height: 600px;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(0, 0, 0);
-  border-bottom-right-radius: 80px 80px;
+  background-size: cover;
+  background-position: center;
+  border-bottom-right-radius: 80px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 1); /* Sombra envolvente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
 }
 
-.card1 {
-  background-color: #a5b2cd;
+.card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño un 5% */
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.8); /* Agranda un poco la sombra */
 }
 
-.card2 {
-  background-color: rgb(240, 152, 152);
-}
-
-.card3 {
-  background-color: rgb(231, 240, 168);
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Capa de sombra */
+  border-bottom-right-radius: 80px;
+  z-index: 1;
 }
 
 .card-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
   padding: 20px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.875em;
   text-align: left;
-  border-radius: 10px;
 }
 
-h2 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.card1 {
+  background-image: url('assets/Photos/1.png');
 }
 
-p {
-  font-size: 0.8rem;
+.card2 {
+  background-image: url('assets/Photos/_734962bd-46aa-4362-8e86-eb47a5441f6e.jpeg');
 }
 
+.card3 {
+  background-image: url('assets/Photos/_b92309a6-357f-4382-a137-fcc5c963545e.jpeg');
+}
+
+/* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
+  .servicios-cards {
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+  }
+
   .card {
-    flex: 1 1 100%;
-    height: 200px;
+    flex: 0 0 auto; /* Evita que las tarjetas se reduzcan */
+    width: 80%; /* Ancho del 80% en pantallas pequeñas */
+    height: auto; /* Altura automática */
   }
 }
 
-@media (max-width: 992px) {
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .servicios-cards {
+    flex-direction: column; /* Cambia la dirección a columna */
+    align-items: center; /* Centra las tarjetas en columna */
+  }
+
   .card {
-    flex: 1 1 50%;
-    height: 250px;
+    width: 90%; /* Ancho del 90% en pantallas pequeñas */
+    height: auto; /* Altura automática */
   }
 }
 
@@ -221,6 +268,26 @@ p {
 }
 
 
+.capacitaciones button {
+  display: inline-block;
+  padding: 0.8em 2em;
+  margin-top: 1.5em;
+  font-size: 1.2vw; /* Tamaño dinámico del botón */
+  background-color: #ffffff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el ratón */
+.capacitaciones button:hover {
+    transform: scale(1.1); /* Aumenta el tamaño */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+.capacitaciones button:hover {
+  background-color: #ffffff;
+}
   .capacitaciones-informacion {
     display: flex;
     align-items: flex-start;
@@ -229,14 +296,18 @@ p {
   }
 
   .imgCap {
-    width: 50%; 
-    height: 550px;
-    background-color: #ccc;
-    background-image: url('./assets/Photos/aasss.jpg');
-    background-size: cover;
-    background-position: center;
-    margin-right: 20px;
-  }
+    background-image: url('./assets/Photos/asesoria.webp');
+    width: 490px; /* Ancho fijo */
+    height: 660px; /* Altura fija */
+    background-size: contain; /* Asegura que la imagen esté completa */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+
+
+
+
 
   .capacitaciones-informacion div {
     width: 50%; 
@@ -252,20 +323,28 @@ p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 50px;
+    color: #000;
   }
 
   .capacitaciones-informacion button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #1c2a45;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 0.8em 2em;
+    margin-top: 1.5em;
+    font-size: 1.2vw; /* Tamaño dinámico del botón */
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
   }
-
+ 
+  /* Efecto al pasar el ratón */
   .capacitaciones-informacion button:hover {
-    background-color: #0056b3;
+      transform: scale(1.1); /* Aumenta el tamaño */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+  }
+  .capacitaciones-informacion button:hover {
+    background-color: #ffffff;
   }
 
   @media (max-width: 768px) {
@@ -289,6 +368,78 @@ p {
     width: 100%;
     padding: 50px;
     background-color: #1c2a45;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center; 
+}
+.blanco {
+  width: 100%;
+  padding: 50px;
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  text-align: center; }
+  
+/*---------------------------------- LLAMA AHORA ------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #1c2a45;
+  color: #ffffff;
+}
+
+.contact-info {
+  max-width: 300px;
+}
+
+.contact-info h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info p, .contact-info a {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 10px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1C3D6E;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #ffffff;
+  color: #000;
 }

@@ -14,6 +14,9 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+    
+    <!-- Script de EmailJS -->
+    
   </head>
   <body>
     <div id="navbar-placeholder"></div>
@@ -21,7 +24,7 @@
     <!--------------------------- Inicio ---------------------------------->
     <div class="hero">
       <video autoplay muted loop>
-        <source src="assets\videos\video.mp4" type="video/mp4" />
+        <source src="assets/videos/video.mp4" type="video/mp4" />
         Tu navegador no soporta la reproducción de videos.
       </video>
       <div class="hero-content">
@@ -37,9 +40,8 @@
     </div>
 
     <!--------------------------- Servicios ---------------------------------->
-
     <div class="servicios">
-      <h1>SERVICIOS</h1>
+      <h1>Servicios</h1>
     </div>
     <div class="servicios-cards">
       <div class="container">
@@ -57,11 +59,7 @@
           <div class="card-content">
             <h2>Variedad de ofertas laborales</h2>
             <p>
-              Nuestros servicios incluyen una amplia variedad de ofertas
-              laborales, tanto a tiempo completo como a medio tiempo, ajustadas
-              a las necesidades y capacidades de cada individuo. Facilitamos la
-              búsqueda de empleos accesibles que promuevan la igualdad de
-              oportunidades y la diversidad en el lugar de trabajo.
+              Ofrecemos diversas oportunidades laborales, tanto a tiempo completo como parcial, adaptadas a las necesidades de cada persona, promoviendo la igualdad y la diversidad en el entorno laboral.
             </p>
           </div>
         </div>
@@ -69,16 +67,16 @@
           <div class="card-content">
             <h2>Ofertas de tiempo limitado</h2>
             <p>
-              Permiten a las empresas tener una una ventaja de oportunidad
+              Permiten a las empresas tener una ventaja de oportunidad
               limitada para revisar y considerar perfiles laborales que no
-              podrían estar disponible en el futuro.
+              podrían estar disponibles en el futuro.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- CAPACIOTACIONES EMPRESARIALES -->
+    <!-- CAPACITACIONES EMPRESARIALES -->
     <div class="capacitaciones">
       <h1>Capacitaciones Empresariales</h1>
       <button>Contactanos</button>
@@ -100,12 +98,91 @@
       </div>
     </div>
 
-<!-- LLAMA AHORA -->
+    <!-- LLAMA AHORA -->
+    <div class="llamaAhora">
+      <h1>Llama ahora y agenda una cita con nuestros asesores +57 3226338561</h1>
+    </div>
 
-<div class="llamaAhora">
-  <h1>Llama ahora y agenda una cita con nuestros asesores 123-456-7890</h1>
-</div>
+    <div class="blanco">
+      <p></p>
+    </div>
 
+    <!-- Contactanos  -->
+    <section class="contact-section">
+      <div class="contact-info">
+        <h2>Contactanos</h2>
+        <p>INCLULAB</p>
+        <p>Colombia - Bello Antioquia</p>
+        <p><a href="mailto:inclulab.11@gmail.com">inclulab.11@gmail.com</a></p>
+        <p>+57 3226338561</p>
+        <div class="social-media">
+          <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=61555878077347&mibextid=ZbWKwL">
+            <img src="assets/Photos/face.png" alt="Facebook Logo" width="30" height="30">
+          </a>
+          <a class="navbar-brand" href="https://www.instagram.com/inclulab_once?igsh=MXRyYmR2M3ZvcWVwZQ==">
+            <img src="assets/Photos/insta.png" alt="Instagram Logo" width="30" height="30">
+          </a>
+          <a class="navbar-brand" href="https://www.tiktok.com/@inclulab.11?_t=8pbqekMCSM2&_r=1">
+            <img src="assets/Photos/tik.png" alt="TikTok Logo" width="30" height="30">
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form id="contact-form">
+          <label for="nombre">Nombre *</label>
+          <input type="text" id="nombre" name="from_name" required>
+          
+          <label for="apellido">Apellido *</label>
+          <input type="text" id="apellido" name="last_name" required>
+          
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="phone">
+          
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="message" rows="4"></textarea>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+      
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "AuiB3BOl5wO6XGOGK",
+      });
+   })();
+</script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init('AuiB3BOl5wO6XGOGK'); // Tu clave pública
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir la recarga de la página
+
+    // Enviar el formulario usando EmailJS
+    emailjs.sendForm('service_1oosquc', 'template_ow3igua', this)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('El mensaje ha sido enviado correctamente pronto nos estaremos comunicando contigo');
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Ha ocurrido un error, inténtalo de nuevo: ' + JSON.stringify(error));
+      });
+  });
+</script>
+
+      
+    
     <script>
       fetch("navbar.html")
         .then((response) => response.text())
