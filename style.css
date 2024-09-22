@@ -1,0 +1,294 @@
+/* Ajustes generales */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Estilos generales del navbar */
+.navbar-custom {
+  background-color: #1c2a45;
+}
+
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 600; /* Semibold */
+  color: rgb(255, 255, 255);
+}
+
+.navbar-brand:hover {
+  color: white; /* Mantiene el color blanco al pasar el cursor */
+}
+
+/* Contenedor principal del héroe (video y contenido) */
+.hero {
+  position: relative;
+  height: 100vh; /* Ocupar toda la altura de la ventana */
+  overflow: hidden;
+}
+
+/* Video de fondo */
+.hero video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  filter: blur(2px); /* Si deseas mantener el efecto borroso */
+}
+
+/* Contenido sobre el video */
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%; /* Ocupar el 100% de la altura del video */
+  color: white;
+  background-color: rgba(28, 42, 69, 0.6); /* Fondo con transparencia */
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centramos el contenido horizontalmente */
+  align-items: center; /* Centramos el contenido verticalmente */
+  padding: 2em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para el fondo */
+}
+.escrito h1 {
+  font-size: 2em; /* Tamaño del título (más pequeño) */
+}
+
+.escrito p {
+  font-size: 1em; /* Tamaño del párrafo (más pequeño) */
+}
+
+.escrito a {
+  font-size: 0.9em; /* Tamaño del botón (más pequeño) */
+}
+
+/* Ajustar los tamaños de las fuentes según el tamaño de la pantalla */
+.hero-content h1 {
+  font-size: 4vw; /* Usamos vw para hacer que el texto escale con el tamaño de la pantalla */
+  margin: 0;
+}
+
+.hero-content p {
+  width: 300px; /* Ajusta el ancho según tu necesidad */
+  font-size: 1.5em;
+  margin: 0.5em 0;
+}
+
+.hero-content a {
+  display: inline-block;
+  padding: 0.8em 2em;
+  margin-top: 1.5em;
+  font-size: 1.2vw; /* Tamaño dinámico del botón */
+  background-color: #ffffff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* Media Queries para ajustar el contenido en pantallas más pequeñas */
+
+/* Dispositivos pequeños (teléfonos) */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 8vw; /* Ajustamos el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  .hero-content p {
+    font-size: 4vw;
+  }
+
+  .hero-content a {
+    font-size: 3vw;
+    padding: 0.6em 1.5em;
+  }
+}
+
+/* Dispositivos medianos (tablets) */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 6vw; /* Un poco más grande que en teléfonos pero más pequeño que en escritorio */
+  }
+
+  .hero-content p {
+    font-size: 2.5vw;
+  }
+
+  .hero-content a {
+    font-size: 2vw;
+    padding: 0.7em 1.8em;
+  }
+}
+
+/*---------------------------------- Servicios ------------------------------------*/
+
+.servicios {
+  width: 100%;
+  padding: 50px;
+  margin: 50px;
+  background-color: #f8f9fa;
+  text-align: center; 
+}
+
+.servicios h1 {
+  font-size: 2em; 
+  font-weight: bold; 
+  color: #333;
+}
+
+.servicios-cards {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  margin: 0px;
+  flex-direction: column;
+  background-color: #1c2a45;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  border-bottom-right-radius: 80px 80px;
+}
+
+.card1 {
+  background-color: #a5b2cd;
+}
+
+.card2 {
+  background-color: rgb(240, 152, 152);
+}
+
+.card3 {
+  background-color: rgb(231, 240, 168);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 50%;
+    height: 250px;
+  }
+}
+
+/*---------------------------------- Capacitaciones empresariales ------------------------------------*/
+
+.capacitaciones{
+    width: 100%;
+    padding: 50px;
+    margin: 50px;
+    background-color: #f8f9fa;
+    text-align: center; 
+}
+
+
+  .capacitaciones-informacion {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .imgCap {
+    width: 50%; 
+    height: 550px;
+    background-color: #ccc;
+    background-image: url('./assets/Photos/aasss.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+  }
+
+  .capacitaciones-informacion div {
+    width: 50%; 
+    padding: 40px;
+  }
+
+  .capacitaciones-informacion h1 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .capacitaciones-informacion p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+
+  .capacitaciones-informacion button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1c2a45;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .capacitaciones-informacion button:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .capacitaciones-informacion {
+      flex-direction: column;
+    }
+
+    .imgCap {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    .capacitaciones-informacion div {
+      width: 100%;
+    }
+  }
+
+/*---------------------------------- LLAMA AHORA ------------------------------------*/
+
+.llamaAhora{
+    width: 100%;
+    padding: 50px;
+    background-color: #1c2a45;
+    color: white;
+    text-align: center; 
+}

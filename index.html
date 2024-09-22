@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INCLULAB - Home</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <!--------------------------- Inicio ---------------------------------->
+    <div class="hero">
+      <video autoplay muted loop>
+        <source src="assets\videos\video.mp4" type="video/mp4" />
+        Tu navegador no soporta la reproducción de videos.
+      </video>
+      <div class="hero-content">
+        <div class="escrito">
+          <h1>INCLULAB</h1>
+          <p>
+            Juntos rompemos barreras y creamos oportunidades para una sociedad
+            inclusiva
+          </p>
+          <a href="#">Sobre Nosotros</a>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------- Servicios ---------------------------------->
+
+    <div class="servicios">
+      <h1>SERVICIOS</h1>
+    </div>
+    <div class="servicios-cards">
+      <div class="container">
+        <div class="card card1">
+          <div class="card-content">
+            <h2>Oportunidades Laborales</h2>
+            <p>
+              Ofrecemos un enfoque que no solo garantiza la igualdad de
+              oportunidades, sino que también promueve la diversidad y la
+              inclusión en el ámbito laboral.
+            </p>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="card-content">
+            <h2>Variedad de ofertas laborales</h2>
+            <p>
+              Nuestros servicios incluyen una amplia variedad de ofertas
+              laborales, tanto a tiempo completo como a medio tiempo, ajustadas
+              a las necesidades y capacidades de cada individuo. Facilitamos la
+              búsqueda de empleos accesibles que promuevan la igualdad de
+              oportunidades y la diversidad en el lugar de trabajo.
+            </p>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="card-content">
+            <h2>Ofertas de tiempo limitado</h2>
+            <p>
+              Permiten a las empresas tener una una ventaja de oportunidad
+              limitada para revisar y considerar perfiles laborales que no
+              podrían estar disponible en el futuro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAPACIOTACIONES EMPRESARIALES -->
+    <div class="capacitaciones">
+      <h1>Capacitaciones Empresariales</h1>
+      <button>Contactanos</button>
+    </div>
+    <div class="capacitaciones-informacion">
+      <div class="imgCap"></div>
+      <div>
+        <h1>Asesoria Personalizada</h1>
+        <p>
+          Nuestra asesoría se enfoca en identificar áreas clave dentro de la
+          empresa donde se pueden implementar mejoras en términos de
+          accesibilidad, cultura inclusiva y adaptación de roles. Al trabajar
+          estrechamente con cada organización, aseguramos que los empleados con
+          discapacidad puedan desplegar todo su potencial, aumentando no solo su
+          productividad individual, sino también contribuyendo al rendimiento
+          general del equipo.
+        </p>
+        <button>Saber mas</button>
+      </div>
+    </div>
+
+<!-- LLAMA AHORA -->
+
+<div class="llamaAhora">
+  <h1>Llama ahora y agenda una cita con nuestros asesores 123-456-7890</h1>
+</div>
+
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
