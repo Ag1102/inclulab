@@ -222,11 +222,11 @@ html {
 }
 
 .card2 {
-  background-image: url('assets/Photos/_734962bd-46aa-4362-8e86-eb47a5441f6e.jpeg');
+  background-image: url('assets/Photos/2.png');
 }
 
 .card3 {
-  background-image: url('assets/Photos/_b92309a6-357f-4382-a137-fcc5c963545e.jpeg');
+  background-image: url('assets/Photos/3.png');
 }
 
 /* Media queries para pantallas pequeñas */
@@ -296,7 +296,7 @@ html {
   }
 
   .imgCap {
-    background-image: url('./assets/Photos/asesoria.webp');
+    background-image: url('./assets/Photos/asesoria.png');
     width: 490px; /* Ancho fijo */
     height: 660px; /* Altura fija */
     background-size: contain; /* Asegura que la imagen esté completa */
