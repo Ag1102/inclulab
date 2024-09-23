@@ -19,7 +19,7 @@
   <!-- Contenido de la página -->
   <div class="about">
     <h1>Sobre Nosotros</h1>
-    <p>Inclulab es una Agencia de Empleo
+    <h5>Inclulab es una Agencia de Empleo
       creada en el año 2023 con el objetivo
        de promover la inclusión laboral de
       personas con discapacidades,
@@ -28,7 +28,7 @@
       la creación de entornos laborales
       inclusivos y adaptados a las
       necesidades de todos los
-      discapacitados.</p>
+      discapacitados.</h5>
       <a class="sub">
       ¿Por qué elegirnos?
       </p>
@@ -64,80 +64,10 @@
 
   </div>
  
+  <div class="Footer">
+    <p>@2024 Derechos reservados Vanessa - Anthony</p>
+  </div>
 
-  <!-- Contactanos  -->
-  <section class="contact-section">
-    <div class="contact-info">
-      <h2>Contactanos</h2>
-      <p>INCLULAB</p>
-      <p>Colombia - Bello Antioquia</p>
-      <p><a href="mailto:inclulab.11@gmail.com">inclulab.11@gmail.com</a></p>
-      <p>+57 3226338561</p>
-      <div class="social-media">
-        <a class="navbar-brand" href="https://www.facebook.com/profile.php?id=61555878077347&mibextid=ZbWKwL">
-          <img src="assets/Photos/face.png" alt="Facebook Logo" width="30" height="30">
-        </a>
-        <a class="navbar-brand" href="https://www.instagram.com/inclulab_once?igsh=MXRyYmR2M3ZvcWVwZQ==">
-          <img src="assets/Photos/insta.png" alt="Instagram Logo" width="30" height="30">
-        </a>
-        <a class="navbar-brand" href="https://www.tiktok.com/@inclulab.11?_t=8pbqekMCSM2&_r=1">
-          <img src="assets/Photos/tik.png" alt="TikTok Logo" width="30" height="30">
-        </a>
-      </div>
-    </div>
-
-    <div class="contact-form">
-      <form id="contact-form">
-        <label for="nombre">Nombre *</label>
-        <input type="text" id="nombre" name="from_name" required>
-        
-        <label for="apellido">Apellido *</label>
-        <input type="text" id="apellido" name="last_name" required>
-        
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="telefono">Teléfono</label>
-        <input type="tel" id="telefono" name="phone">
-        
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="message" rows="4"></textarea>
-        
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-    
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
- (function(){
-    emailjs.init({
-      publicKey: "AuiB3BOl5wO6XGOGK",
-    });
- })();
-</script>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-(function(){
-  emailjs.init('AuiB3BOl5wO6XGOGK'); // Tu clave pública
-})();
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevenir la recarga de la página
-
-  // Enviar el formulario usando EmailJS
-  emailjs.sendForm('service_1oosquc', 'template_ow3igua', this)
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-      alert('El mensaje ha sido enviado correctamente pronto nos estaremos comunicando contigo');
-    }, function(error) {
-      console.log('FAILED...', error);
-      alert('Ha ocurrido un error, inténtalo de nuevo: ' + JSON.stringify(error));
-    });
-});
-</script>
   <!-- Script para cargar el navbar -->
   <script>
     fetch('navbar.html')
