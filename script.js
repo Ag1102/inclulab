@@ -7,4 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("¡Has hecho clic en el botón!");
     });
 });
-
+document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('active'); // Alterna la clase 'active' al hacer clic
+    });
+  });
+  
